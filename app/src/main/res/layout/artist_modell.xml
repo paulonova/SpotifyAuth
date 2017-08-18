@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/imgUrlImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="Apple Pie"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_image"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txtArtistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:text="Artist name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imgUrlImage"
+        android:layout_toEndOf="@+id/imgUrlImage"
+        android:layout_marginTop="16dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutPlaceTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtArtistName"
+        android:layout_alignLeft="@+id/txtArtistName"
+        android:layout_alignStart="@+id/txtArtistName">
+
+
+        <ImageView
+            android:id="@+id/imgViewLocation"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/txtPopularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popularity"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/txtGenres"
+            android:layout_alignStart="@+id/txtGenres" />
+
+        <ImageView
+            android:id="@+id/imgViewTime"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/txtPopularity"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_something_else" />
+
+        <TextView
+            android:id="@+id/txtGenres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPopularity"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/imgViewTime"
+            android:text="@string/something"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/imgUrlImage"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorAccent" />
+
+
+</RelativeLayout>
